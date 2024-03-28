@@ -63,7 +63,7 @@ if __name__ == '__main__':
     llist.push(1) 
   
     
-    print("Element at last is :", llist.getlast(n)) 
+    print("Element at last is :", llist.getlast()) 
 
 # Output: Element at last is 1
 # Time Complexity: O(n)
