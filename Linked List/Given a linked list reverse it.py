@@ -41,7 +41,7 @@ class LinkedList:
             next_node = current.next
             current.next = prev
             prev = current
-            current = current.next 
+            current = next_node
         return prev 
            
         # if we get to this line, the caller was asking 
