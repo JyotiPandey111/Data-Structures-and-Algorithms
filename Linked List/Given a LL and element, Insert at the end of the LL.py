@@ -1,4 +1,4 @@
-# A complete working Python program to insert at last node 
+# A complete working Python program to insert end node 
 # in a linked list 
   
 # Node class 
@@ -31,17 +31,25 @@ class LinkedList:
   
         # 4. Move the head to point to new Node 
         self.head = new_node 
-  
-    # Returns data at last node in linked list 
-    def getlast(self): 
-        current = self.head  # Initialise current 
-        if current == None:
-          return
 
+
+  
+    # Insert data at end node in linked list 
+    def getend(self,new_ele): 
+        current = self.head  # Initialise currentt
+        # creating new node from new element
+            new_insert = Node(new_ele)
+        if current == None:
+          head = new_insert
+          return head
+
+        
         # Loop while end of linked list is not reached 
         while (current.next != None): 
-            current = current.next 
-        return current.data 
+          current = current.next
+        current.next = new_insert
+        return head 
+            
            
         # if we get to this line, the caller was asking 
         # for a non-existent element so we assert fail 
@@ -62,9 +70,9 @@ if __name__ == '__main__':
     llist.push(12) 
     llist.push(1) 
   
-    
-    print("Element at last is :", llist.getlast(n)) 
+    new_ele = 6
+    print("Element at beginning is :", llist.getbeg(new_ele)) 
 
-# Output: Element at last is 1
+# Output: Element at beging is is 6
 # Time Complexity: O(n)
 # Auxiliary Space: O(1) space created for variables
